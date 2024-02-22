@@ -160,12 +160,12 @@ Loops in programming can be categorized based on various factors. Here are some 
      } while(input != sentinel);  //In this example, -1 is the sentinel value. The loop will continue to ask for input until the user enters -1.
 
 3. Based on Loop Structure:
-   - Simple Loop: Basic loop structure with a single condition and loop body. For example:
+   - Unnested Loop (Simple Loop): Basic loop structure with a single condition and loop body. For example:
      
      for(int i = 0; i < 10; i++) {
          printf("%d ", i);
      }
-   - Nested Loop: One loop embedded within another. For example:
+   - Multi-Level Loop (Nested Loop): One loop embedded within another. For example:
      
      for(int i = 0; i < 5; i++) {
          for(int j = 0; j < 5; j++) {
@@ -226,15 +226,15 @@ Loops in programming can be categorized based on various factors. Here are some 
          printf("%d ", *(ptr + i));
      }
      
-7. Based on the Step:
-    - Decrementing Loop: This type of loop reduces the counter variable in each iteration until a certain condition is satisfied. An example of 
-      this is a for loop that counts downwards. For example:
+7. Based on the Step (Iteration Direction):
+    - Descending Loop (Decrementing Loop): This type of loop reduces the counter variable in each iteration until a certain condition is satisfied. 
+      An example of this is a for loop that counts downwards. For example:
      
      for(int i = 10; i > 0; i--) {
          printf("%d ", i);
      }
-    - Incrementing Loop: This type of loop increases the counter variable in each iteration until a certain condition is satisfied. This is 
-      commonly seen in most for loops. For example:
+    - Ascending Loop (Incrementing Loop): This type of loop increases the counter variable in each iteration until a certain condition is satisfied. 
+      This is commonly seen in most for loops. For example:
      
      for(int i = 0; i < 10; i++) {
          printf("%d ", i);
