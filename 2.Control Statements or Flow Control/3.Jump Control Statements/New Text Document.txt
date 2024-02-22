@@ -1,0 +1,15 @@
+Jump Control Statements:
+
+These allow the program to jump to another part of the program, skipping the execution of certain statements.
+Jump control statements in C are:
+break statement: Terminates the innermost enclosing loop or switch-case statement.
+continue statement: Skips the rest of the current loop iteration and continues with the next iteration.
+goto statement: Provides an unconditional jump to a labeled statement within the same function.
+
+
+
+goto label;
+// ...
+label:
+    // Code to jump to
+return statement: Exits a function and optionally returns a value to the function's caller.
