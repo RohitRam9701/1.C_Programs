@@ -66,7 +66,19 @@ Syntax:
       }
      while( condition)    // control statement
 
-Note : All the variables in the control statement are called control variables. 
+Note : In a control statement, specifically in a loop, the control variable is the one that determines the number of times the loop will 
+       execute. It’s the variable that gets initialized, tested, and updated each time through the loop.
+
+       for (int i = 0; i < 10; i++)
+       {
+          int j = i * 2;
+          printf("i: %d, j: %d\n", i, j);
+       }
+
+       Here, i is the control variable, but j is not, even though it is in the control statement (the body of the loop). j is calculated 
+       each time through the loop, but it does not control the execution of the loop. So, it’s not accurate to say that all variables in 
+       the control statement are control variables. Only the ones that control the execution of the loop are called control variables.
+       
 Note : The braces are needed only if the body contains two or more statements. However, it is a good practice to use braces even if the 
        body has only one statement.
 
