@@ -52,19 +52,23 @@
 
 /* 
 Syntax:
-   for( initialization; test condition; updation (increment or decrement))  // control statement
+  1. for( initialization; test condition; updation (increment or decrement))  // control statement
       {
           statement(s);   // body of the loop
       }
-   while( condition)      // control statement
+  2. while( condition)      // control statement
       {
           statement(s);   // body of the loop
       }
-   do
+  3. do
       {
           statement(s);   // body of the loop
       }
      while( condition)    // control statement
+
+Note : All the variables in the control statement are called control variables. 
+Note : The braces are needed only if the body contains two or more statements. However, it is a good practice to use braces even if the 
+       body has only one statement.
 
 Loops in programming can be categorized based on various factors. Here are some common categorizations:
 
@@ -241,7 +245,7 @@ do {
 } while(i < 10);
 
 */
-/****/
+/*************************************************************************************************************************************/
 
 #include<stdio.h>
 int main()

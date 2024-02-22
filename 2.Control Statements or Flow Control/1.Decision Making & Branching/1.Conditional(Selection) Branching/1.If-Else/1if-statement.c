@@ -7,6 +7,9 @@
                             control passes to statement-x.
                           //when the condition is true both the statement-block and statement-x are executed in sequence.              
               //It is better to avoid float operands in conjunction with the equal /not equal condition checking operators.
+
+Note : The braces are needed only if the body contains two or more statements. However, it is a good practice to use braces even if the 
+       body has only one statement.              
 */
 #include<stdio.h>
 void main()
