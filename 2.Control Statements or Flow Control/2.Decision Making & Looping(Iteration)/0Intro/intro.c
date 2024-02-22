@@ -2,6 +2,52 @@
 /*When a number of statements in a program is to be repeatedly executed as long as the given condition is satisfied,the statements are to be put 
   into a loop structure */
 
+/* 
+//Program to find average of three numbers
+
+#include<stdio.h>
+int main()
+{
+    float num1, num2, num3, sum=0, average;
+    printf("\nEnter number: ");
+    scanf("%d", &num1);
+    sum = sum + num1;          //Adds num1 to the last value of sum i.e. 0
+    printf("\nEnter number: ");
+    scanf("%d", &num2);
+    sum = sum + num2;          //Adds num2 to the last value of sum i.e. num1
+    printf("\nEnter number: ");
+    scanf("%d", &num3);
+    sum = sum + num3;          //Adds num3 to the last value of sum i.e. num1+num2
+    average = sum/3;
+    printf("\nAverage of the numbers is %.2f", average);
+    return 0;
+}
+ There are two problems with this approach:
+  i) Repeating code for large inputs is inefficient. It wastes time, memory, and lengthens the program. 
+  ii) In case the number of times to repeat the code is not known beforehand and depends upon one or more conditions.
+
+ Solution : A loop structure is a better approach.
+
+// Pseudocode to find average of three numbers using loop
+#include<stdio.h>
+int main()
+{
+    int count=1; 
+    float num, sum=0.0, average;
+    //repeat lines 38 to 41 as long as value in count is less than or equal to 3
+    printf("\nEnter Number: ");
+    scanf("%d", &num);
+    sum = sum + num;
+    count = count + 1;
+    //end_of_loop
+    average = sum/count;
+    printf("\nAverage of %d numbers is %.2f", count, average);
+    return 0;
+}
+
+
+*/
+
 /* Calculate the sum of squares of all integers between 1 and 10 using if-else.
             .......
             .......
