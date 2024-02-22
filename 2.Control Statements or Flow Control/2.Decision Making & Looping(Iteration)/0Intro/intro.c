@@ -37,15 +37,35 @@
     #include<stdio.h>
     int main()
     {
-        int n, sum = 0;
+        int n, sum = 0;          // n = counter or control variable
+
+      //using for loop  
         for (n = 1; n <= 10; n++)// control statement: This is the part of the loop that determines whether the loop will execute or not. 
                                  // It includes the initialization, condition, and increment/decrement operation. For example, in a for loop, 
                                  // the control statement might look like this: for (int i = 0; i < 10; i++)
         {
             sum = sum + n * n;   // body of the loop: This is the part of the loop that gets executed as long as the condition in the control 
-                                 // statement is true. It’s enclosed in curly braces {} following the control statement.
+                                 // statement is true. It's enclosed in curly braces {} following the control statement.
         }
         printf("Sum of squares of all integers between 1 and 10 is %d", sum);
+
+      //using while loop
+        n = 1;                        //Initialization
+        while (n <= 10)               //Testing   
+        {
+            sum = sum + n * n;
+            n = n + 1;                //Incrementing
+        }
+        printf("\nSum of squares of all integers between 1 and 10 is %d", sum);
+
+      //using do-while loop
+        n = 1;
+        do
+        {
+            sum = sum + n * n;
+            n = n + 1;
+        } while (n <= 10);
+        printf("\nSum of squares of all integers between 1 and 10 is %d", sum);  
         return 0;
     }
 */
@@ -67,7 +87,7 @@ Syntax:
      while( condition)    // control statement
 
 Note : In a control statement, specifically in a loop, the control variable is the one that determines the number of times the loop will 
-       execute. It’s the variable that gets initialized, tested, and updated each time through the loop.
+       execute. It's the variable that gets initialized, tested, and updated each time through the loop.
 
        for (int i = 0; i < 10; i++)
        {
@@ -76,7 +96,7 @@ Note : In a control statement, specifically in a loop, the control variable is t
        }
 
        Here, i is the control variable, but j is not, even though it is in the control statement (the body of the loop). j is calculated 
-       each time through the loop, but it does not control the execution of the loop. So, it’s not accurate to say that all variables in 
+       each time through the loop, but it does not control the execution of the loop. So, it's not accurate to say that all variables in 
        the control statement are control variables. Only the ones that control the execution of the loop are called control variables.
        
 Note : The braces are needed only if the body contains two or more statements. However, it is a good practice to use braces even if the 
@@ -117,17 +137,27 @@ Loops in programming can be categorized based on various factors. Here are some 
          printf("%d ", i);
      }
      
-        int input;
-        do {
-            printf("Enter a number (0 to stop): ");
-            scanf("%d", &input);
-        } while(input != 0);  //In this example, 0 is the sentinel value. The loop will continue to ask for input until the user enters 0.
+     =========
+     character = ' ';                // character is initialized to ''. 
+     while(character != 'Y')         // character is tested to be 'Y'
+         character = getchar();      // since character is '', the loop continues to read characters from standard input executing 
+                                     // character = getchar() until Y is pressed.
+     xxxxxxxxx;                      // condition = false when character = Y, and the loop terminates, thus transferring the control to the 
+     =========                       // statement xxxxxxxxx. The character constant 'y' is sentinel value.the variable character is condition 
+                                     // variable (sentinel variable).
+          
+
+     int input;
+     do {
+          printf("Enter a number (0 to stop): ");
+          scanf("%d", &input);
+     } while(input != 0);  //In this example, 0 is the sentinel value. The loop will continue to ask for input until the user enters 0.
         
-        int input, sentinel = -1;
-        do {
-            printf("Enter a number (-1 to stop): ");
-            scanf("%d", &input);
-        } while(input != sentinel);  //In this example, -1 is the sentinel value. The loop will continue to ask for input until the user enters -1.
+     int input, sentinel = -1;
+     do {
+          printf("Enter a number (-1 to stop): ");
+          scanf("%d", &input);
+     } while(input != sentinel);  //In this example, -1 is the sentinel value. The loop will continue to ask for input until the user enters -1.
 
 3. Based on Loop Structure:
    - Simple Loop: Basic loop structure with a single condition and loop body. For example:
