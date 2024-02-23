@@ -45,6 +45,42 @@ int main()
     return 0;
 }
 
+// Program to find average of three numbers using while loop
+#include<stdio.h>
+int main()
+{
+    int count=1; 
+    float num, sum=0, average;
+    while (count<=3)
+    {
+        printf("\nEnter number: ");
+        scanf("%d", &num);
+        sum = sum + num;
+        count = count + 1;
+    }
+    average = sum/count;
+    printf("\nAverage of %d numbers is %.2f", count, average);
+    return 0;
+}
+*/
+
+/*
+// Use of while loop to print from 1 to 5
+#include<stdio.h>
+int main()
+{
+    int count=1;
+    while(count <= 5) <---------------|  //When last line in the body of the loop is reached, control goes back to loop header to recheck condition.    
+    {                                 | 
+        printf("\nNumber %d", count); |
+        ++count; ---------------------|
+    }
+//  In short
+//  int count = 0;
+//  while (++ count <= 5)
+//     printf("\n Number %d", count);         
+    return 0;
+}
 
 */
 
