@@ -1,3 +1,12 @@
+/*Structure of while loop :
+Initialize_loop_counter;       //Optional
+while (condition)
+{
+  statements;
+  .. .. .. ..
+  change_loop_counter;         //Optional
+}
+*/
 /*Problem:The ABC electric company. manufacturers for consumer products. Their inventory position on a particular day is given below.
  Code                          Quantity                   Rate (Rs)
  F105                          275                        575.00    
