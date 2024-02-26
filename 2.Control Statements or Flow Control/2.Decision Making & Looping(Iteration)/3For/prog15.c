@@ -1,13 +1,16 @@
-/*To generate the given series upto n terms :1,3,6,10,15,...,n terms;value of n being taken as input*/
+/*To generate the given series upto n terms :1,2!,3!,4!,...,n terms;value of n being taken as input*/
 #include<stdio.h>
+#include<math.h>
 void main()
 {
- int i,n,t,cd;
+ int i,j,n,f,s;
  printf("\n Enter total terms in series:");scanf("%d",&n);
- for(i=0,t=0,cd=1;i<n;i++)
+ for(i=n,f=1;i>0;i--)
  {
-  t=t+cd;
-  printf(" %d ",t);
-  cd=cd+1;
+  for(j=0;j<n;j++) 
+  {
+  f=f*i;
+  }
  }
+  printf(" %d ",f);
 } 

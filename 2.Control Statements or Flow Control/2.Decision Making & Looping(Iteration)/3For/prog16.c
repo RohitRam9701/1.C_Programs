@@ -1,18 +1,16 @@
-                                                                 /*Nested Loop*/
-/*When a number of inner loops are executed, a number of terms for each execution of outer loop,such looping pattern is called 'nested loop'*/ 
-/*To find the prime between 1 and 50*/
+/*To generate the given series upto n terms :1!,3!,5!,...,n terms;value of n being taken as input*/
 #include<stdio.h>
+#include<math.h>
 void main()
 {
- int n,k,c;
- for(n=1;n<=50;n++) 
+ int i,j,n,f,m;
+ printf("\n Enter total terms in series:");scanf("%d",&n);
+ for(i=0,m=1;i<n;i++,m+=2)
  {
-  for(k=1,c=0;k<=n;k++) 
+  for(f=1,j=m;j>0;j--) 
   {
-   if (n%k==0)
-   c=c+1;   
-  }  
-  if(c==2)
-  printf("\n\n Prime number:%d",n);
- }  
+  f=f*j;
+  }
+ }
+  printf(" %d ",f);
 }

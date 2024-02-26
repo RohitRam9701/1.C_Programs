@@ -119,7 +119,7 @@ int main()
     #include<stdio.h>
     int main()
     {
-        int n, sum = 0;          // n = counter or control variable
+        int n, sum = 0;          // n = counter variable (a single control variable)
 
       //using for loop  
         for (n = 1; n <= 10; n++)// control statement: This is the part of the loop that determines whether the loop will execute or not. 
@@ -154,19 +154,52 @@ int main()
 
 /* 
 Syntax:
-  1. for( initialization; test condition; updation (increment or decrement))  // control statement
+  1. for( initialization(initialise_loop_counter); test condition(check_condition); updation (increment or decrement or modify_counter))  
+     // one control statement, also note that it has semicolons ';' after each part and not a comma ','. The two semicolons must be kept.
       {
           statement(s);   // body of the loop
       }
-  2. while( condition)      // control statement
+
+     e.g.
+     // Initialization; Condition; Increment 
+     for(int i = 0; i < 3; i++) {
+        // 'i' is initialized to 0, the loop continues while 'i' is less than 3, and 'i' is incremented by 1 in each iteration 
+        printf("i: %d\n", i);
+     }
+
+     int f,n,i;
+     printf("\n Enter number:");scanf("%d",&n);
+     for(i=n,f=1;i>0;i--)   // here i = n and f = 1 both are parts of initialization, so comma',' was used
+     {
+      f=f*i;
+     } 
+     printf("\n Factorial of the number:%d",f);
+      
+  2. while( condition)      // more than one control statement
+      {
+          statement(s);     // body of the loop
+      }
+     
+     e.g.
+     int i = 0;             // Initialization
+     while(i < 3)           // Condition
+     {
+       printf("i: %d\n", i);
+       i++;                 // Increment
+     }
+ 
+  3. do                   // more than one control statement
       {
           statement(s);   // body of the loop
       }
-  3. do
-      {
-          statement(s);   // body of the loop
-      }
-     while( condition)    // control statement
+     while( condition)    
+
+     e.g.
+     int i = 0;                // Initialization
+     do {
+        printf("i: %d\n", i);
+        i++;                   // Increment
+     } while(i < 3);           // Condition
 
 Note : In a control statement, specifically in a loop, the control variable is the one that determines the number of times the loop will 
        execute. It's the variable that gets initialized, tested, and updated each time through the loop.
@@ -260,6 +293,11 @@ Loops in programming can be categorized based on various factors. Here are some 
      while(1) {
          printf("This is an infinite loop\n");
      }
+
+     for(;;) {
+        printf("This is an infinite loop\n");
+    }
+
      
 4. Based on the Number of Control Statements:
    - Single-Control Loop: Only one control statement is present. This is typically a `for` loop, where the initialization, condition check, and 
@@ -332,6 +370,7 @@ Loops in programming can be categorized based on various factors. Here are some 
      
    - Parallel Loop: This type of loop executes the loop body in parallel. For example:
      
+     // Parallel loop (conceptual) 
      #pragma omp parallel for  //The #pragma omp parallel for directive tells the compiler to execute the following for loop in parallel.
      for(int i = 0; i < 10; i++) {
          printf("%d ", i);
@@ -344,14 +383,14 @@ Loops in programming can be categorized based on various factors. Here are some 
 
 Note that the following examples are based on the same loop, but they demonstrate different types of loops.   
     
-- For Loop (Definite, Entry-Controlled, Single-Control):
+- For Loop (Definite(counter controlled), Entry-Controlled(pre test), Single-Control):
 
 for(int i = 0; i < 10; i++) {
     printf("%d\n", i);
 }
 In this example, `i` is the counter. The loop will execute 10 times, and `i` will increment by 1 after each iteration.
 
-- While Loop (Indefinite, Entry-Controlled, Multiple-Control):
+- While Loop (Indefinite(sentinel controlled), Entry-Controlled(pre test), Multiple-Control):
 
 int i = 0;
 while(i < 10) {
@@ -360,7 +399,7 @@ while(i < 10) {
 }
 In this example, the loop will execute as long as `i` is less than `10`.
 
-- Do-While Loop (Indefinite, Exit-Controlled, Multiple-Control):
+- Do-While Loop (Indefinite(sentinel controlled), Exit-Controlled(post test), Multiple-Control):
 
 int i = 0;
 do {
