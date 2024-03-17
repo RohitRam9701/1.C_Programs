@@ -2,15 +2,14 @@
 #include<stdio.h>
 #include<math.h>
 void main()
-{
- int i,j,n,f,s;
+{int i1,j1,n,f1,s;
  printf("\n Enter total terms in series:");scanf("%d",&n);
- for(i=n,f=1;i>0;i--)
+ for(i1=n,f1=1;i1>0;i1--)
  {
-  for(j=0;j<n;j++) 
+  for(j1=0;j1<n;j1++) 
   {
-  f=f*i;
+  f1=f1*i1;
   }
  }
-  printf(" %d ",f);
+  printf(" %d ",f1);
 } 

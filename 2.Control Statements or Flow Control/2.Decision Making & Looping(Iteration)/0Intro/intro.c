@@ -155,7 +155,7 @@ int main()
 /* 
 Syntax:
   1. for( initialization(initialise_loop_counter); test condition(check_condition); updation (increment or decrement or modify_counter))  
-     // one control statement, also note that it has semicolons ';' after each part and not a comma ','. The two semicolons must be kept.
+     // one control statement, also note that it must have two semicolons ';' even if no initialization, condition or, updation given.
       {
           statement(s);   // body of the loop
       }
